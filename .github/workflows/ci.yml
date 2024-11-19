@@ -70,7 +70,7 @@ jobs:
           bundler-cache: true
 
       - name: Install dependencies
-        run: bundle install´
+        run: bundle install
         
       - name: Wait for PostgreSQL to be ready
         run: |
