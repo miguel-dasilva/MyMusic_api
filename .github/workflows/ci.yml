@@ -70,8 +70,15 @@ jobs:
           bundler-cache: true
 
       - name: Install dependencies
-        run: bundle install
-
+        run: bundle install´
+        
+      - name: Wait for PostgreSQL to be ready
+        run: |
+          until pg_isready -h localhost -p 5432 -U postgres; do
+            echo "Waiting for PostgreSQL to be ready..."
+            sleep 2
+          done
+        
       - name: Prepare the database
         run: |
           bin/rails db:create
