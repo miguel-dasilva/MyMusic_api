@@ -49,5 +49,3 @@ group :development, :test do
 
   gem "shoulda-matchers"
 end
-
-
