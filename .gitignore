@@ -34,7 +34,6 @@ spec/examples.txt
 # Environment variables
 .env
 .credentials.yml.enc
-.kamal/
 
 # Pry history
 .pry_history
